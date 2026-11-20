@@ -712,6 +712,205 @@ body:not(.home) #app {
   justify-content: center;
 }
 
+/* ==================================
+   NOVA ABA CONVERSAS
+   ================================== */
+
+#conversasView {
+  display: none;
+}
+
+body.conversas {
+  background: #080000;
+  overflow: hidden;
+}
+
+body.conversas::before {
+  display: none;
+}
+
+body.conversas #app {
+  display: none;
+}
+
+body.conversas #conversasView {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #080000;
+}
+
+/* Cada tela da sequência */
+.conversa-tela {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #080000;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.conversa-tela.ativa {
+  display: block;
+}
+
+/* Primeira tela: Snoopy vermelho e preto */
+.conversa-inicio {
+  background-image:
+    linear-gradient(135deg, rgba(0,0,0,.48), rgba(90,0,12,.42), rgba(0,0,0,.72)),
+    url("./fundo-snoopy.png");
+}
+
+.conversa-inicio::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 15%, rgba(0,0,0,.65) 100%),
+    linear-gradient(180deg, rgba(120,0,15,.20), rgba(0,0,0,.42));
+  pointer-events: none;
+}
+
+/* Fundos das próximas telas */
+.conversa-pagina-1 {
+  background-image: url("./fundo01.jpg");
+}
+
+.conversa-pagina-2 {
+  background-image: url("./fundo02.jpg");
+}
+
+.conversa-pagina-3 {
+  background-image: url("./fundo03.jpg");
+}
+
+.conversa-pagina-4 {
+  background-image: url("./fundo04.jpg");
+}
+
+/* Imagens decorativas: não são fundos */
+.conversa-decoracao {
+  position: absolute;
+  z-index: 2;
+  width: clamp(125px, 36vw, 270px);
+  height: clamp(125px, 36vw, 270px);
+  object-fit: contain;
+  filter: drop-shadow(0 5px 12px rgba(0,0,0,.45));
+  animation: flutuar 4s ease-in-out infinite;
+}
+
+.conversa-pagina-1 .conversa-decoracao:nth-child(1) {
+  width: clamp(175px, 52vw, 350px);
+  height: clamp(175px, 52vw, 350px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.conversa-pagina-2 .conversa-decoracao:nth-child(1) {
+  top: 12%;
+  left: 4%;
+  transform: rotate(-8deg);
+}
+
+.conversa-pagina-2 .conversa-decoracao:nth-child(2) {
+  bottom: 12%;
+  right: 4%;
+  transform: rotate(8deg);
+}
+
+.conversa-pagina-3 .conversa-decoracao:nth-child(1) {
+  width: clamp(180px, 55vw, 360px);
+  height: clamp(180px, 55vw, 360px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.conversa-pagina-4 .conversa-decoracao:nth-child(1) {
+  width: clamp(180px, 55vw, 360px);
+  height: clamp(180px, 55vw, 360px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Seta de avançar */
+.seta-conversas {
+  position: absolute;
+  z-index: 5;
+  right: 22px;
+  bottom: 25px;
+  width: 76px;
+  height: 76px;
+  min-height: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,.85);
+  border-radius: 50%;
+  background: rgba(0,0,0,.58);
+  color: white;
+  font-size: 48px;
+  line-height: 1;
+  box-shadow: 0 0 20px rgba(255,255,255,.35);
+  text-shadow: 0 0 12px white;
+  animation: pulsarSeta 1.7s ease-in-out infinite;
+}
+
+.conversa-inicio .seta-conversas {
+  right: 50%;
+  bottom: 9%;
+  transform: translateX(50%);
+  width: 86px;
+  height: 86px;
+  font-size: 55px;
+  border-color: #ff4b55;
+  background: rgba(35,0,0,.78);
+  box-shadow: 0 0 22px rgba(255,20,40,.8);
+}
+
+.seta-conversas:hover {
+  transform: scale(1.08);
+}
+
+.conversa-inicio .seta-conversas:hover {
+  transform: translateX(50%) scale(1.08);
+}
+
+@keyframes pulsarSeta {
+  0%,100% { box-shadow: 0 0 12px rgba(255,255,255,.28); }
+  50% { box-shadow: 0 0 25px rgba(255,255,255,.75); }
+}
+
+/* Voltar uma tela */
+.voltar-conversas {
+  position: absolute;
+  z-index: 6;
+  top: 18px;
+  left: 18px;
+  width: 48px;
+  height: 48px;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 50%;
+  background: rgba(0,0,0,.55);
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+}
+
 /* Responsividade */
 @media (max-width:600px) {
   body { background-attachment: scroll; }
@@ -876,6 +1075,19 @@ body:not(.home) #app {
   .heart-divider {
     margin: 8px auto 18px;
   }
+
+  .seta-conversas {
+    right: 18px;
+    bottom: 20px;
+    width: 68px;
+    height: 68px;
+    font-size: 43px;
+  }
+
+  .conversa-inicio .seta-conversas {
+    width: 82px;
+    height: 82px;
+  }
 }
 
 @media (max-width:360px) {
@@ -900,6 +1112,45 @@ body:not(.home) #app {
   <img class="snoopy-decor" src="snoopy-coracao-4.png" alt="">
 </div>
 
+<!-- NOVA SEQUÊNCIA VISUAL DA ABA CONVERSAS -->
+<div id="conversasView">
+
+  <!-- Primeira tela: Snoopy com vermelho e preto -->
+  <section class="conversa-tela conversa-inicio ativa">
+    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Começar">➜</button>
+  </section>
+
+  <!-- Segunda tela: fundo01 -->
+  <section class="conversa-tela conversa-pagina-1">
+    <img class="conversa-decoracao" src="conversa.jpg" alt="">
+    <button class="voltar-conversas" onclick="voltarConversas()" aria-label="Voltar">‹</button>
+    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Avançar">➜</button>
+  </section>
+
+  <!-- Terceira tela: fundo02 -->
+  <section class="conversa-tela conversa-pagina-2">
+    <img class="conversa-decoracao" src="conversa1.jpg" alt="">
+    <img class="conversa-decoracao" src="conversa2.jpg" alt="">
+    <button class="voltar-conversas" onclick="voltarConversas()" aria-label="Voltar">‹</button>
+    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Avançar">➜</button>
+  </section>
+
+  <!-- Quarta tela: fundo03 -->
+  <section class="conversa-tela conversa-pagina-3">
+    <img class="conversa-decoracao" src="conversa3.jpg" alt="">
+    <button class="voltar-conversas" onclick="voltarConversas()" aria-label="Voltar">‹</button>
+    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Avançar">➜</button>
+  </section>
+
+  <!-- Quinta tela: fundo04 -->
+  <section class="conversa-tela conversa-pagina-4">
+    <img class="conversa-decoracao" src="conversa4.jpg" alt="">
+    <button class="voltar-conversas" onclick="voltarConversas()" aria-label="Voltar">‹</button>
+    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Voltar ao início">➜</button>
+  </section>
+
+</div>
+
 <div id="app">
 
   <!-- CABEÇALHO NOVO -->
@@ -918,7 +1169,7 @@ body:not(.home) #app {
     <nav class="site-nav">
       <button onclick="iniciar()">⌂ Início</button>
       <button onclick="etapaFilhos()">Nossas Histórias ♡</button>
-      <button onclick="etapaTalvez()">Conversas ♡</button>
+      <button onclick="abrirConversas()">Conversas ♡</button>
       <button onclick="etapaGravidez()">Surpresas ♡</button>
     </nav>
   </header>
@@ -998,6 +1249,43 @@ const musicaFim = document.getElementById("musicaFim");
 const musicaSinceridade = document.getElementById("musicaSinceridade");
 const musicaSinofato = document.getElementById("musicaSinofato");
 const fundoFotos = document.getElementById("fundoFotos");
+
+/* Controle da sequência Conversas */
+let paginaConversas = 0;
+
+const telasConversas = document.querySelectorAll(".conversa-tela");
+
+function abrirConversas() {
+  pararTodasMusicas();
+  limpar();
+
+  paginaConversas = 0;
+  document.body.className = "conversas";
+
+  mostrarTelaConversas();
+}
+
+function mostrarTelaConversas() {
+  telasConversas.forEach((tela, indice) => {
+    tela.classList.toggle("ativa", indice === paginaConversas);
+  });
+}
+
+function avancarConversas() {
+  if (paginaConversas < telasConversas.length - 1) {
+    paginaConversas++;
+    mostrarTelaConversas();
+  } else {
+    iniciar();
+  }
+}
+
+function voltarConversas() {
+  if (paginaConversas > 0) {
+    paginaConversas--;
+    mostrarTelaConversas();
+  }
+}
 
 const todosAudios = [
   musica,
