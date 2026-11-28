@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IdiotaBurro1904 ♡</title>
+<title>Uma pergunta para você ❤️</title>
 
 <style>
 * { box-sizing: border-box; }
@@ -12,7 +12,6 @@
 html, body {
   margin: 0;
   min-height: 100%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -208,7 +207,7 @@ body.cigana::before { background: rgba(65,25,0,.30); }
 body.nos::before { background: rgba(30,12,0,.30); }
 body.vermelho::before { background: rgba(70,0,20,.66); }
 
-/* Ramificação: Por que você é assim */
+/* Nova ramificação: Por que você é assim */
 body.talvez-vermelho {
   background: #39000b;
 }
@@ -428,10 +427,16 @@ body.fim-ciano #decoracaoFim { display: block; }
 
 @keyframes neonSuave {
   0%,100% {
-    text-shadow: 0 0 2px #fff, 0 0 4px #b8faff, 0 0 8px rgba(85,234,255,.55);
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #b8faff,
+      0 0 8px rgba(85,234,255,.55);
   }
   50% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #b8faff, 0 0 11px rgba(85,234,255,.65);
+    text-shadow:
+      0 0 3px #fff,
+      0 0 6px #b8faff,
+      0 0 11px rgba(85,234,255,.65);
   }
 }
 
@@ -440,483 +445,9 @@ body.fim-ciano #decoracaoFim { display: block; }
   50% { transform: translateY(-5px); }
 }
 
-/* ==================================
-   NOVA APARÊNCIA DA PÁGINA INICIAL
-   ================================== */
-
-#siteHeader,
-#heroSubtitle,
-#menuPanel,
-#homeMessage,
-#siteFooter {
-  display: none;
-}
-
-body.home #app {
-  max-width: 1050px;
-  min-height: 100vh;
-  justify-content: flex-start;
-  padding: 22px 18px 30px;
-  gap: 0;
-}
-
-/* Cabeçalho */
-body.home #siteHeader {
-  display: block;
-  width: 100%;
-  margin-bottom: 24px;
-}
-
-.brand-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 5px 4px 17px;
-}
-
-.brand-name {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-size: clamp(23px,5vw,38px);
-  text-shadow: 0 0 7px #e9aaff, 0 0 17px #c52cff;
-}
-
-.brand-heart {
-  color: #e9aaff;
-  font-size: 34px;
-  text-shadow: 0 0 12px #d32cff;
-}
-
-.brand-small {
-  border: 2px solid #c52cff;
-  border-radius: 30px;
-  padding: 10px 13px;
-  min-height: auto;
-  background: rgba(42,0,65,.75);
-  font-size: 13px;
-  white-space: nowrap;
-  box-shadow: 0 0 12px rgba(194,44,255,.55);
-}
-
-.site-nav {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 5px;
-  padding: 7px;
-  border: 2px solid #c52cff;
-  border-radius: 23px;
-  background: rgba(24,0,38,.82);
-  box-shadow: 0 0 15px rgba(194,44,255,.55);
-}
-
-.site-nav button {
-  min-height: 43px;
-  padding: 7px 4px;
-  border: none;
-  border-radius: 13px;
-  background: transparent;
-  box-shadow: none;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(11px,2.7vw,16px);
-  color: #f7ddff;
-}
-
-.site-nav button:hover {
-  background: rgba(190,50,255,.18);
-  box-shadow: 0 0 12px rgba(210,80,255,.35);
-}
-
-/* Apresentação */
-body.home #pergunta {
-  width: min(100%,720px);
-  margin: 20px auto 15px;
-  padding: 20px 15px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-size: clamp(25px,5.5vw,39px);
-  line-height: 1.35;
-  border: 2px solid #c52cff;
-  border-radius: 45px;
-  background: rgba(27,0,43,.78);
-  box-shadow: 0 0 18px #a52cff, inset 0 0 15px rgba(174,44,255,.12);
-  text-shadow: 0 0 12px #e7aaff;
-}
-
-body.home #heroSubtitle {
-  display: block;
-  width: 100%;
-  margin: 3px auto 22px;
-  color: #f2caff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-size: clamp(17px,4vw,25px);
-  text-shadow: 0 0 10px #c52cff;
-}
-
-.heart-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 90%;
-  margin: 12px auto 24px;
-  color: #e8aaff;
-  font-size: 35px;
-  text-shadow: 0 0 12px #c52cff;
-}
-
-.heart-divider::before,
-.heart-divider::after {
-  content: "";
-  height: 2px;
-  flex: 1;
-  background: linear-gradient(90deg,transparent,#d83cff,transparent);
-  box-shadow: 0 0 9px #d83cff;
-}
-
-/* Painel do menu */
-body.home #menuPanel {
-  display: block;
-  width: 100%;
-  padding: 18px 17px 20px;
-  margin: 0 auto 25px;
-  border: 2px solid #c52cff;
-  border-radius: 35px;
-  background: rgba(25,0,39,.79);
-  box-shadow: 0 0 17px rgba(198,44,255,.7), inset 0 0 20px rgba(155,25,255,.10);
-}
-
-.menu-heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 0 0 17px;
-  color: #f4d9ff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-size: clamp(20px,4.5vw,30px);
-  text-shadow: 0 0 12px #d45aff;
-}
-
-.menu-heading span {
-  font-size: 26px;
-  color: #d94cff;
-}
-
-body.home #opcoes {
-  width: 100%;
-  max-width: none;
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 15px;
-  margin: 0;
-}
-
-body.home #opcoes button {
-  min-height: 92px;
-  padding: 13px 10px;
-  border: 2px solid #c52cff;
-  border-radius: 30px;
-  background: rgba(55,5,91,.80);
-  box-shadow: 0 0 12px rgba(190,35,255,.45);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(15px,3.5vw,21px);
-  line-height: 1.35;
-  text-shadow: 0 0 8px rgba(235,190,255,.35);
-}
-
-body.home #opcoes button:hover {
-  transform: translateY(-3px);
-  background: rgba(91,12,130,.92);
-  box-shadow: 0 0 20px rgba(213,44,255,.8);
-}
-
-/* Mensagem especial */
-body.home #homeMessage {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  margin: 12px auto 24px;
-  padding: 16px;
-  border: 2px solid #b72cff;
-  border-radius: 32px;
-  background: rgba(31,0,48,.84);
-  box-shadow: 0 0 16px rgba(190,35,255,.55);
-}
-
-.home-snoopy {
-  flex: 0 0 34%;
-  max-width: 170px;
-  height: 145px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 9px rgba(211,75,255,.55));
-  animation: flutuar 3.5s ease-in-out infinite;
-}
-
-.home-message-text {
-  flex: 1;
-  text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
-}
-
-.home-message-text h2 {
-  margin: 0 0 9px;
-  color: #f6dfff;
-  font-size: clamp(19px,4vw,27px);
-  text-shadow: 0 0 10px #d45aff;
-}
-
-.home-message-text p {
-  margin: 0;
-  color: #e8c9ff;
-  font-style: italic;
-  font-size: clamp(14px,3.5vw,19px);
-  line-height: 1.6;
-}
-
-/* Rodapé */
-body.home #siteFooter {
-  display: block;
-  width: 100%;
-  padding: 5px 10px 12px;
-  color: #e9baff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-size: 18px;
-  line-height: 1.8;
-  text-shadow: 0 0 10px #c52cff;
-}
-
-body.home #siteFooter .paw {
-  margin: 0 14px;
-  font-size: 25px;
-}
-
-/* Ajustes nas telas internas */
-body:not(.home) #siteHeader,
-body:not(.home) #heroSubtitle,
-body:not(.home) #menuPanel,
-body:not(.home) #homeMessage,
-body:not(.home) #siteFooter {
-  display: none !important;
-}
-
-body:not(.home) #app {
-  justify-content: center;
-}
-
-/* ==================================
-   NOVA ABA CONVERSAS
-   ================================== */
-
-#conversasView {
-  display: none;
-}
-
-body.conversas {
-  background: #080000;
-  overflow: hidden;
-}
-
-body.conversas::before {
-  display: none;
-}
-
-body.conversas #app {
-  display: none;
-}
-
-body.conversas #conversasView {
-  display: block;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  overflow: hidden;
-  background: #080000;
-}
-
-/* Cada tela da sequência */
-.conversa-tela {
-  display: none;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: #080000;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.conversa-tela.ativa {
-  display: block;
-}
-
-/* Primeira tela: Snoopy vermelho e preto */
-.conversa-inicio {
-  background-image:
-    linear-gradient(135deg, rgba(0,0,0,.48), rgba(90,0,12,.42), rgba(0,0,0,.72)),
-    url("./fundo-snoopy.png");
-}
-
-.conversa-inicio::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at center, transparent 15%, rgba(0,0,0,.65) 100%),
-    linear-gradient(180deg, rgba(120,0,15,.20), rgba(0,0,0,.42));
-  pointer-events: none;
-}
-
-/* Fundos das próximas telas */
-.conversa-pagina-1 {
-  background-image: url("./fundo01.jpg");
-}
-
-.conversa-pagina-2 {
-  background-image: url("./fundo02.jpg");
-}
-
-.conversa-pagina-3 {
-  background-image: url("./fundo03.jpg");
-}
-
-.conversa-pagina-4 {
-  background-image: url("./fundo04.jpg");
-}
-
-/* Imagens decorativas: não são fundos */
-.conversa-decoracao {
-  position: absolute;
-  z-index: 2;
-  width: clamp(125px, 36vw, 270px);
-  height: clamp(125px, 36vw, 270px);
-  object-fit: contain;
-  filter: drop-shadow(0 5px 12px rgba(0,0,0,.45));
-  animation: flutuar 4s ease-in-out infinite;
-}
-
-.conversa-pagina-1 .conversa-decoracao:nth-child(1) {
-  width: clamp(175px, 52vw, 350px);
-  height: clamp(175px, 52vw, 350px);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.conversa-pagina-2 .conversa-decoracao:nth-child(1) {
-  top: 12%;
-  left: 4%;
-  transform: rotate(-8deg);
-}
-
-.conversa-pagina-2 .conversa-decoracao:nth-child(2) {
-  bottom: 12%;
-  right: 4%;
-  transform: rotate(8deg);
-}
-
-.conversa-pagina-3 .conversa-decoracao:nth-child(1) {
-  width: clamp(180px, 55vw, 360px);
-  height: clamp(180px, 55vw, 360px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.conversa-pagina-4 .conversa-decoracao:nth-child(1) {
-  width: clamp(180px, 55vw, 360px);
-  height: clamp(180px, 55vw, 360px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Seta de avançar */
-.seta-conversas {
-  position: absolute;
-  z-index: 5;
-  right: 22px;
-  bottom: 25px;
-  width: 76px;
-  height: 76px;
-  min-height: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(255,255,255,.85);
-  border-radius: 50%;
-  background: rgba(0,0,0,.58);
-  color: white;
-  font-size: 48px;
-  line-height: 1;
-  box-shadow: 0 0 20px rgba(255,255,255,.35);
-  text-shadow: 0 0 12px white;
-  animation: pulsarSeta 1.7s ease-in-out infinite;
-}
-
-.conversa-inicio .seta-conversas {
-  right: 50%;
-  bottom: 9%;
-  transform: translateX(50%);
-  width: 86px;
-  height: 86px;
-  font-size: 55px;
-  border-color: #ff4b55;
-  background: rgba(35,0,0,.78);
-  box-shadow: 0 0 22px rgba(255,20,40,.8);
-}
-
-.seta-conversas:hover {
-  transform: scale(1.08);
-}
-
-.conversa-inicio .seta-conversas:hover {
-  transform: translateX(50%) scale(1.08);
-}
-
-@keyframes pulsarSeta {
-  0%,100% { box-shadow: 0 0 12px rgba(255,255,255,.28); }
-  50% { box-shadow: 0 0 25px rgba(255,255,255,.75); }
-}
-
-/* Voltar uma tela */
-.voltar-conversas {
-  position: absolute;
-  z-index: 6;
-  top: 18px;
-  left: 18px;
-  width: 48px;
-  height: 48px;
-  min-height: 0;
-  padding: 0;
-  border: 1px solid rgba(255,255,255,.65);
-  border-radius: 50%;
-  background: rgba(0,0,0,.55);
-  color: white;
-  font-size: 28px;
-  line-height: 1;
-}
-
-/* Responsividade */
 @media (max-width:600px) {
   body { background-attachment: scroll; }
-
   #app { padding: 35px 16px; }
-
   h1 { margin-bottom: 30px; }
 
   .foto-fundo {
@@ -975,126 +506,6 @@ body.conversas #conversasView {
     font-size: 27px;
     margin-top: 10px;
   }
-
-  /* Novo início no celular */
-  body.home #app {
-    padding: 18px 12px 25px;
-  }
-
-  body.home #siteHeader {
-    margin-bottom: 17px;
-  }
-
-  .brand-row {
-    padding-bottom: 13px;
-  }
-
-  .brand-name {
-    font-size: clamp(20px,5vw,29px);
-    gap: 6px;
-  }
-
-  .brand-heart {
-    font-size: 27px;
-  }
-
-  .brand-small {
-    padding: 9px 10px;
-    font-size: 11px;
-  }
-
-  .site-nav {
-    gap: 1px;
-    padding: 5px;
-  }
-
-  .site-nav button {
-    font-size: clamp(10px,2.6vw,13px);
-    min-height: 40px;
-  }
-
-  body.home #pergunta {
-    margin: 17px auto 12px;
-    padding: 19px 13px;
-    border-radius: 36px;
-    font-size: clamp(24px,6vw,33px);
-  }
-
-  body.home #heroSubtitle {
-    margin-bottom: 18px;
-  }
-
-  body.home #menuPanel {
-    padding: 15px 12px 16px;
-    border-radius: 29px;
-  }
-
-  body.home #opcoes {
-    gap: 11px;
-  }
-
-  body.home #opcoes button {
-    min-height: 86px;
-    padding: 11px 8px;
-    border-radius: 25px;
-    font-size: clamp(14px,3.8vw,18px);
-  }
-
-  .menu-heading {
-    gap: 7px;
-    font-size: clamp(19px,4.8vw,24px);
-  }
-
-  .menu-heading span {
-    font-size: 21px;
-  }
-
-  body.home #homeMessage {
-    padding: 11px 9px;
-    gap: 5px;
-    border-radius: 25px;
-  }
-
-  .home-snoopy {
-    flex-basis: 32%;
-    height: 120px;
-  }
-
-  .home-message-text h2 {
-    font-size: clamp(17px,4.2vw,22px);
-  }
-
-  .home-message-text p {
-    font-size: clamp(13px,3.3vw,16px);
-  }
-
-  body.home #siteFooter {
-    font-size: 16px;
-  }
-
-  .heart-divider {
-    margin: 8px auto 18px;
-  }
-
-  .seta-conversas {
-    right: 18px;
-    bottom: 20px;
-    width: 68px;
-    height: 68px;
-    font-size: 43px;
-  }
-
-  .conversa-inicio .seta-conversas {
-    width: 82px;
-    height: 82px;
-  }
-}
-
-@media (max-width:360px) {
-  .brand-small { font-size: 10px; }
-  .brand-name { font-size: 19px; }
-  .site-nav button { font-size: 10px; }
-  body.home #opcoes button { font-size: 13px; }
 }
 </style>
 </head>
@@ -1112,112 +523,12 @@ body.conversas #conversasView {
   <img class="snoopy-decor" src="snoopy-coracao-4.png" alt="">
 </div>
 
-<!-- NOVA SEQUÊNCIA VISUAL DA ABA CONVERSAS -->
-<div id="conversasView">
-
-  <!-- Primeira tela: Snoopy com vermelho e preto -->
-  <section class="conversa-tela conversa-inicio ativa">
-    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Começar">➜</button>
-  </section>
-
-  <!-- Segunda tela: fundo01 -->
-  <section class="conversa-tela conversa-pagina-1">
-    <img class="conversa-decoracao" src="conversa.jpg" alt="">
-    <button class="voltar-conversas" onclick="voltarConversas()" aria-label="Voltar">‹</button>
-    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Avançar">➜</button>
-  </section>
-
-  <!-- Terceira tela: fundo02 -->
-  <section class="conversa-tela conversa-pagina-2">
-    <img class="conversa-decoracao" src="conversa1.jpg" alt="">
-    <img class="conversa-decoracao" src="conversa2.jpg" alt="">
-    <button class="voltar-conversas" onclick="voltarConversas()" aria-label="Voltar">‹</button>
-    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Avançar">➜</button>
-  </section>
-
-  <!-- Quarta tela: fundo03 -->
-  <section class="conversa-tela conversa-pagina-3">
-    <img class="conversa-decoracao" src="conversa3.jpg" alt="">
-    <button class="voltar-conversas" onclick="voltarConversas()" aria-label="Voltar">‹</button>
-    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Avançar">➜</button>
-  </section>
-
-  <!-- Quinta tela: fundo04 -->
-  <section class="conversa-tela conversa-pagina-4">
-    <img class="conversa-decoracao" src="conversa4.jpg" alt="">
-    <button class="voltar-conversas" onclick="voltarConversas()" aria-label="Voltar">‹</button>
-    <button class="seta-conversas" onclick="avancarConversas()" aria-label="Voltar ao início">➜</button>
-  </section>
-
-</div>
-
 <div id="app">
-
-  <!-- CABEÇALHO NOVO -->
-  <header id="siteHeader">
-    <div class="brand-row">
-      <div class="brand-name">
-        <span class="brand-heart">♡</span>
-        IdiotaBurro1904
-      </div>
-
-      <button class="brand-small" onclick="iniciar()">
-        Nosso Cantinho ♡
-      </button>
-    </div>
-
-    <nav class="site-nav">
-      <button onclick="iniciar()">⌂ Início</button>
-      <button onclick="etapaFilhos()">Nossas Histórias ♡</button>
-      <button onclick="abrirConversas()">Conversas ♡</button>
-      <button onclick="etapaGravidez()">Surpresas ♡</button>
-    </nav>
-  </header>
-
   <h1 id="pergunta">Espero que goste independente das escolhas</h1>
-
-  <div id="heroSubtitle">
-    Um pequeno site, com um grande amor...
-  </div>
-
-  <div class="heart-divider" id="homeDivider">♡</div>
-
-  <!-- PAINEL DO MENU -->
-  <section id="menuPanel">
-    <div class="menu-heading">
-      <span>🐾</span>
-      Escolha por onde começar ♡
-      <span>🐾</span>
-    </div>
-
-    <div id="opcoes"></div>
-  </section>
-
   <div id="snoopy"></div>
   <p id="mensagem"></p>
   <div id="legenda"></div>
-
-  <!-- MENSAGEM ESPECIAL DA PÁGINA INICIAL -->
-  <section id="homeMessage">
-    <img class="home-snoopy" src="snoopy-coracao.png" alt="Snoopy com coração">
-
-    <div class="home-message-text">
-      <h2>Uma mensagem para você ♡</h2>
-      <p>
-        Porque você é especial e eu quero
-        compartilhar tudo isso com você...
-      </p>
-    </div>
-  </section>
-
-  <footer id="siteFooter">
-    <div class="heart-divider">♡</div>
-    <span class="paw">🐾</span>
-    Feito com carinho ♡
-    <span class="paw">🐾</span>
-    <br>
-    IdiotaBurro1904
-  </footer>
+  <div id="opcoes"></div>
 
   <textarea id="campo" placeholder="Escreva sua resposta..." style="display:none"></textarea>
   <button id="enviarTexto" style="display:none">Enviar resposta</button>
@@ -1249,43 +560,6 @@ const musicaFim = document.getElementById("musicaFim");
 const musicaSinceridade = document.getElementById("musicaSinceridade");
 const musicaSinofato = document.getElementById("musicaSinofato");
 const fundoFotos = document.getElementById("fundoFotos");
-
-/* Controle da sequência Conversas */
-let paginaConversas = 0;
-
-const telasConversas = document.querySelectorAll(".conversa-tela");
-
-function abrirConversas() {
-  pararTodasMusicas();
-  limpar();
-
-  paginaConversas = 0;
-  document.body.className = "conversas";
-
-  mostrarTelaConversas();
-}
-
-function mostrarTelaConversas() {
-  telasConversas.forEach((tela, indice) => {
-    tela.classList.toggle("ativa", indice === paginaConversas);
-  });
-}
-
-function avancarConversas() {
-  if (paginaConversas < telasConversas.length - 1) {
-    paginaConversas++;
-    mostrarTelaConversas();
-  } else {
-    iniciar();
-  }
-}
-
-function voltarConversas() {
-  if (paginaConversas > 0) {
-    paginaConversas--;
-    mostrarTelaConversas();
-  }
-}
 
 const todosAudios = [
   musica,
@@ -1413,7 +687,7 @@ function registrar(perguntaFeita, resposta) {
 function iniciar() {
   pararTodasMusicas();
   limpar();
-  document.body.className = "home";
+  document.body.className = "";
 
   pergunta.textContent = "Espero que goste independente das escolhas";
 
@@ -1603,7 +877,7 @@ function etapaEsseEFim() {
   mostrarVerso(versos[0].texto);
 }
 
-/* Menu da opção Por que você é assim */
+/* Menu da nova opção */
 function etapaTalvez() {
   pararTodasMusicas();
   limpar();
@@ -1627,6 +901,7 @@ function etapaTalvez() {
   botao("Voltar às opções", iniciar);
 }
 
+/* Opção sinceridade: música sinceridade.mp3 */
 function etapaSinceridade() {
   pararTodasMusicas();
   limpar();
@@ -1642,6 +917,7 @@ function etapaSinceridade() {
   botao("Voltar às opções", etapaTalvez);
 }
 
+/* Opção o que você quer de fato: música sinofato.mp3 */
 function etapaOQueQuer() {
   pararTodasMusicas();
   limpar();
